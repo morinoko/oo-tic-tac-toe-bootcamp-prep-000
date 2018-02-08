@@ -49,11 +49,11 @@ class TicTacToe
     index = input_to_index(input)
     player = current_player(board)
     
-    if valid_move?(board, index)
-      move(board, index, player)
-      display_board(board)
+    if valid_move?(index)
+      move(index, player)
+      display_board
     else
-      turn(board)
+      turn
     end
   end
 end
