@@ -113,8 +113,8 @@ class TicTacToe
   end
   
   # Check if game is over (won, full board, or a draw)
-  def over?(board)
-    won?(board) || full?(board) || draw?(board)
+  def over?
+    @board.won? || @board.full? || @board.draw?
   end
 
   
