@@ -40,7 +40,7 @@ class TicTacToe
   ####
   # check if move is valid (within the board and not in a filled position)
   def valid_move?(index)
-    index.between?(0,8) && !@board.position_taken?(index)
+    index.between?(0,8) && !position_taken?(index)
   end
   
   ####
