@@ -119,14 +119,14 @@ class TicTacToe
   end
 
   # returns if winner is "X" or "O"
-  def winner(board)
-    if won?(board)
-      win_combination = won?(board)
+  def winner
+    if won?
+      win_combination = won?
       
       win_index_1 = win_combination[0]
       win_index_2 = win_combination[1]
       win_index_3 = win_combination[2]
-      winning_positions = [board[win_index_1], board[win_index_2], board[win_index_3]]
+      winning_positions = [@board[win_index_1], @board[win_index_2], @board[win_index_3]]
       
       if winning_positions.all? {|position| position == "X"}
         return "X"
