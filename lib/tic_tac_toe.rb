@@ -63,7 +63,7 @@ class TicTacToe
     #@board.count{|token| token == "X" || token == "O"}
   #end
   def turn_count
-    @board.count{|position| position == "X" || position = "O"}
+    @board.count{|token| token == "X" || token = "O"}
   end
 
   # returns current player who needs to make next move
