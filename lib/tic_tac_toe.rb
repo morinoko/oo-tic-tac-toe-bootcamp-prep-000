@@ -111,7 +111,7 @@ class TicTacToe
   # Check if the board is full, but there are no winners
   def draw?
     board = @board
-    !board.won? && board.full?
+    won? && board.full?
   end
   
   # Check if game is over (won, full board, or a draw)
