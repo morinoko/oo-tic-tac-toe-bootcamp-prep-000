@@ -60,14 +60,16 @@ class TicTacToe
   
   # returns number of turns that have been played
   def turn_count
-    count = 0
-    @board.each do |position|
-      if position == "X" || position == "O"
-        count += 1
-      end
-    end
+    @board.count |position|
     
-    return count
+    # count = 0
+    # @board.each do |position|
+    #   if position == "X" || position == "O"
+    #     count += 1
+    #   end
+    # end
+    
+    # return count
   end
 
   # returns current player who needs to make next move
