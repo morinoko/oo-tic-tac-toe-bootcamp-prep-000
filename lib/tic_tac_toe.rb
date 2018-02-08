@@ -36,12 +36,14 @@ class TicTacToe
   def position_taken?(index)
     @board[index] != " " && @board[index] != "" && @board[index] != nil
   end
-
+  
+  ####
   # check if move is valid (within the board and not in a filled position)
   def valid_move?(index)
     index.between?(0,8) && !@board.position_taken?(index)
   end
   
+  ####
   # Process for one complete turn
   def turn
     puts "Please enter 1-9:"
@@ -56,4 +58,6 @@ class TicTacToe
       turn
     end
   end
+  
+  
 end
