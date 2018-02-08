@@ -59,9 +59,6 @@ class TicTacToe
   end
   
   # returns number of turns that have been played
-  #def turn_count
-    #@board.count{|token| token == "X" || token == "O"}
-  #end
   def turn_count
     @board.count{|position| position == "X" || position == "O"}
   end
