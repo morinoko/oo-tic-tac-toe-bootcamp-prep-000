@@ -71,11 +71,9 @@ class TicTacToe
   end
 
   # returns current player who needs to make next move
-  def current_player(board)
-    count = turn_count(board)
-    
+  def current_player
+    count = turn_count
     player = count.even? ? "X" : "O"
-    
     return player
   end
   
