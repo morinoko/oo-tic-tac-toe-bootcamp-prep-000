@@ -101,6 +101,21 @@ class TicTacToe
       winning_combo?(board_combination)
     end
   end
+  
+  # Return false if there are any empty spaces
+  def full?(board)
+    !board.include?(" ")
+  end
+  
+  # Check if the board is full, but there are no winners
+  def draw?(board)
+    !won?(board) && full?(board)
+  end
+  
+  # Check if game is over (won, full board, or a draw)
+  def over?(board)
+    won?(board) || full?(board) || draw?(board)
+  end
 
   
 end
