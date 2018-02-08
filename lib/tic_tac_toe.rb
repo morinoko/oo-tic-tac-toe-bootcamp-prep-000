@@ -77,4 +77,30 @@ class TicTacToe
     return player
   end
   
+  # returns combination of winning indexes. If no winner, returns nil
+  def won?(board)
+    
+    def winning_combo?(combination)
+      combination.all? {|position| position == "X"} || combination.all? {|position| position == "O"}
+    end
+    
+    WIN_COMBINATIONS.detect do |win_combination|
+      # Get index for each winning combination
+      win_index_1 = win_combination[0]
+      win_index_2 = win_combination[1]
+      win_index_3 = win_combination[2]
+      
+      # Get board position at each winning index position
+      # so we can compare
+      board_position_1 = board[win_index_1]
+      board_position_2 = board[win_index_2]
+      board_position_3 = board[win_index_3]
+      
+      board_combination = [board_position_1, board_position_2, board_position_3]
+      
+      winning_combo?(board_combination)
+    end
+  end
+
+  
 end
