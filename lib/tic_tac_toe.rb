@@ -118,5 +118,22 @@ class TicTacToe
     won? || full? || draw?
   end
 
+  # returns if winner is "X" or "O"
+  def winner(board)
+    if won?(board)
+      win_combination = won?(board)
+      
+      win_index_1 = win_combination[0]
+      win_index_2 = win_combination[1]
+      win_index_3 = win_combination[2]
+      winning_positions = [board[win_index_1], board[win_index_2], board[win_index_3]]
+      
+      if winning_positions.all? {|position| position == "X"}
+        return "X"
+      elsif winning_positions.all? {|position| position == "O"}
+        return "O"
+      end
+    end
+  end
   
 end
